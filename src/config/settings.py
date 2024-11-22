@@ -12,6 +12,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+from .env_settings import get_app_settings, get_db_settings, get_env_settings
+
+
+# Local settings from .env
+env_settings = get_env_settings('.env')
+app_settings = get_app_settings()
+db_settings = get_db_settings()
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,10 +29,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-k@a6%9#^ivt8zc9d_^@17#i12n^-!&uw#9-i@+^kv*n^&cvjzz'
+SECRET_KEY = app_settings.secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = app_settings.debug
 
 ALLOWED_HOSTS = []
 
@@ -74,10 +83,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': db_settings.get_config
 }
 
 
