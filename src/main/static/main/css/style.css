@@ -1,0 +1,40 @@
+body {
+    font-family: 'Montserrat';
+}
+
+.my-nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 19.5px;
+}
+
+.my-enter-link {
+    font-size: 16px;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em;
+}
+
+.my-btn-size {
+    width: 88px;
+    height: 44px;
+}
+
+.btn-danger, .btn-danger:hover, .btn-danger:active, .btn-danger:visited {
+    background-color: #FF342B !important;
+}
+
+.custom-content-width {
+    width: 800px;
+}
+
+.custom-card-width {
+    width: 1000;
+}
+
+.nav-center-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 40px;
+  }
