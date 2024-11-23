@@ -1,8 +1,65 @@
 {% extends 'main/layout.html' %}
 
+{% load static %}
+
 {% block title %}
   Главная Страница
 {% endblock title %}
 
 {% block content %}
+  <div class="container">
+    <div class="row text-center">
+      <div class="col pt-5" style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+        <h2 style="color: #0A121E; font-size: 56px; font-weight: 700; letter-spacing: 1.12px">Космическое агентство</h2>
+        <p class="text-center" style="max-width: 751px; color: #3C3C3C; font-size: 18px; font-weight: 500; line-height: 30px; letter-spacing: 0.36px">
+          Национальное управление по аэронавтике и исследованию космического пространства — ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container" style="padding-top: 90px; padding-bottom: 50px;">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <div class="container">
+          <div class="row justify-content-end">
+
+            <div class="col-6" style="display: flex; width: 263px; height: 200px; padding: 30px; flex-direction: column; align-items: center; gap: 30px">
+              <img src="{% static 'main/images/shuttle-space.svg' %}">
+              <h3 style="font-size: 14px; font-style: normal; font-weight: 600; line-height: 26px; letter-spacing: 0.28px">
+                Спейс шаттлы — пилотируемые корабли
+              </h3>
+            </div>
+
+            <div class="col-6" style="display: flex; width: 263px; height: 200px; padding: 30px; flex-direction: column; align-items: center; gap: 30px">
+              <img src="{% static 'main/images/telescope.svg' %}">
+              <h3 style="font-size: 14px; font-style: normal; font-weight: 600; line-height: 26px; letter-spacing: 0.28px">
+                Лучшее телескопическое оборудование
+              </h3>
+            </div>
+
+            <div class="col-6" style="display: flex; width: 263px; height: 200px; padding: 30px; flex-direction: column; align-items: center; gap: 30px">
+              <img src="{% static 'main/images/moon.svg' %}">
+              <h3 style="font-size: 14px; font-style: normal; font-weight: 600; line-height: 26px; letter-spacing: 0.28px">
+                Целимся на Луну и Марс
+              </h3>
+            </div>
+
+            <div class="col-6" style="display: flex; width: 263px; height: 200px; padding: 30px; flex-direction: column; align-items: center; gap: 30px">
+              <img src="{% static 'main/images/medal.svg' %}">
+              <h3 style="font-size: 14px; font-style: normal; font-weight: 600; line-height: 26px; letter-spacing: 0.28px">
+                Золотая медаль по научным исследованиям
+              </h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex col-lg-6" style="justify-content: start; padding-left: 65px">
+        <img src="{% static 'main/images/space.svg' %}">
+      </div>
+
+    </div>
+  </div>
 {% endblock content %}
